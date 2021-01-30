@@ -15,7 +15,7 @@
                             <img src="<?php echo $category['category_thumbnail'] ?>" alt="food-recipe">
                         </div>
                         <div class="recipe-content">
-                            <a href="#"><?php echo $category['category_name'] ?></a>
+                            <a href="http://localhost/datmonan/frontend/index.php?controller=category&action=detail&id=<?php echo $category['id'] ?>"><?php echo $category['category_name'] ?></a>
                         </div>
                     </div>
                 </div>
