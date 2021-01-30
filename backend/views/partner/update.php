@@ -11,6 +11,10 @@
 		<img width="120" src="<?php echo $detail['partner_thumbnail'] ?>" alt="">
 	</div>
 	<div class="div form-group">
+		<label for="">Giới thiệu ngắn</label>
+		<textarea name="desc" id="" cols="30" rows="10" class="form-control"></textarea>
+	</div>
+	<div class="div form-group">
 		<label for="">Trạng thái</label>
 		<select name="status" id="" class="form-control">
 			<option value="0">Hiện</option>

@@ -3,12 +3,13 @@ include_once "models/Model.php";
 
 class Partner extends Model {
 
-	public function updateStore($name, $thumbnail, $status, $id) {
-		$stmt = $this->conn->prepare("UPDATE partners SET partner_name=:name, partner_thumbnail=:thumbnail, partner_status=:status WHERE id=:id");
+	public function updateStore($name, $thumbnail, $status, $desc, $id) {
+		$stmt = $this->conn->prepare("UPDATE partners SET partner_name=:name, partner_thumbnail=:thumbnail, partner_status=:status, partner_desc=:desc WHERE id=:id");
 		$arr = [
 			':name' => $name,
 			':thumbnail' => $thumbnail,
 			':status' => $status,
+			':desc' => $desc,
 			':id' => $id
 		];
 		return $stmt->execute($arr);

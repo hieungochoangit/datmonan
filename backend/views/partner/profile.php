@@ -10,6 +10,10 @@
 		<td><img width="120" src="<?php echo $detail['partner_thumbnail'] ?>" alt=""></td>
 	</tr>
 	<tr>
+		<td>Mô tả ngắn</td>
+		<td><?php echo $detail['partner_desc'] ?></td>
+	</tr>
+	<tr>
 		<td>Trạng thái</td>
 		<td>
 			<?php 

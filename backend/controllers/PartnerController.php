@@ -80,6 +80,7 @@ class PartnerController extends Controller {
 			$name = $_POST['name'];
 			$status = $_POST['status'];
 			$thumbnail = $_FILES['thumbnail'];
+			$desc = $_POST['desc'];
 
 			if (empty($name)) {
 				$this->error = "Không được rỗng";
@@ -88,7 +89,7 @@ class PartnerController extends Controller {
 					$thumbnaillUrl = $this->uploadFile($thumbnail);
 				}
 				// Update
-				$result = $partner->updateStore($name, $thumbnaillUrl, $status, $id);
+				$result = $partner->updateStore($name, $thumbnaillUrl, $status, $desc, $id);
 
 				if ($result) {
 					header("Location: http://localhost/datmonan/backend/index.php?controller=partner&action=detail");

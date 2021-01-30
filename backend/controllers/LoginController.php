@@ -23,7 +23,7 @@ class LoginController {
 						header("Location: http://localhost/datmonan/backend/index.php");
 						exit(); 
 					} else if ($account['role_id'] == 2) {
-						header("Location: http://localhost/datmonan/backend/index.php?controller=partner&action=control");
+						header("Location: http://localhost/datmonan/backend/index.php?controller=partner&action=detail");
 							exit(); 
 					}
 
