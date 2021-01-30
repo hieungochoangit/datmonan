@@ -28,8 +28,8 @@
 				</td>
 				<td><?php echo $cate['category_created_at'] ?></td>
 				<td>
-					<a title="xem" href=""><i class="far fa-eye"></i></a>
-					<a title="sửa" href=""><i class="far fa-edit"></i></a>
+					<a title="xem" href="http://localhost/datmonan/backend/index.php?controller=category&action=detail&id=<?php echo $cate['id'] ?>"><i class="far fa-eye"></i></a>
+					<a title="sửa" href="http://localhost/datmonan/backend/index.php?controller=category&action=update&id=<?php echo $cate['id'] ?>"><i class="far fa-edit"></i></a>
 					<a title="xóa" href=""><i class="far fa-trash-alt"></i></a>
 				</td>
 			</tr>
