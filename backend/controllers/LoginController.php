@@ -18,8 +18,15 @@ class LoginController {
 
 				if ($account) {
 					$_SESSION['admin'] = $account;
-					header("Location: http://localhost/datmonan/backend/index.php");
-					exit();
+					
+					if ($account['role_id'] == 1) {
+						header("Location: http://localhost/datmonan/backend/index.php");
+						exit(); 
+					} else if ($account['role_id'] == 2) {
+						header("Location: http://localhost/datmonan/backend/index.php?controller=partner&action=control");
+							exit(); 
+					}
+
 				} else {
 					$this->error = "Tài khoản hoặc mật khẩu không đúng";
 				}

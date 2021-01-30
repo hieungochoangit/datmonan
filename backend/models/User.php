@@ -10,7 +10,7 @@ class User extends Model {
 	}
 
 	public function checkUserLogin($email, $password) {
-		$stmt = $this->conn->prepare("SELECT users.*, roles.* FROM users INNER JOIN roles WHERE users.user_email=:email AND users.user_password=:password AND users.role_id=1");
+		$stmt = $this->conn->prepare("SELECT * FROM users WHERE user_email=:email AND user_password=:password");
 		$arr = [
 			':email' => $email,
 			':password' => $password

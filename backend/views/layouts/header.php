@@ -102,7 +102,10 @@
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
-                        <li class="has-sub">
+                        
+                        <?php 
+                        if ($_SESSION['admin']['role_id'] == 1)
+                            echo '<li class="has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
@@ -123,7 +126,18 @@
                         <li>
                             <a href="http://localhost/datmonan/backend/index.php?controller=partner">
                                 <i class="fas fa-chart-bar"></i>Quản lý partner</a>
-                        </li>
+                        </li>';
+                        ?>
+
+                        <?php 
+                            if ($_SESSION['admin']['role_id'] == 2) {
+                                echo '<li>
+                            <a href="http://localhost/datmonan/backend/index.php?controller=partner&action=detail">
+                                <i class="fas fa-chart-bar"></i>Quản lý gian hàng</a>
+                        </li>';
+                            }
+
+                         ?>
                     </ul>
                 </nav>
             </div>
