@@ -12,7 +12,7 @@
 	</div>
 	<div class="div form-group">
 		<label for="">Giới thiệu ngắn</label>
-		<textarea name="desc" id="" cols="30" rows="10" class="form-control"></textarea>
+		<textarea name="desc" id="" cols="30" rows="10" class="form-control"><?php echo $detail['partner_desc'] ?></textarea>
 	</div>
 	<div class="div form-group">
 		<label for="">Trạng thái</label>
