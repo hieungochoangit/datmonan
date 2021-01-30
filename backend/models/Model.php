@@ -2,7 +2,7 @@
 include_once "config/database.php";
 
 class Model {
-	
+
 	public $conn = '';
 
     function __construct() {
@@ -11,7 +11,7 @@ class Model {
 
     function connect() {
         try {
-            $conn = new PDO(Database::DB, Database::DB_NAME, Database::DB_PASSWORD);
+            $conn = new PDO(DB::DB, DB::DB_NAME, DB::DB_PASSWORD);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             die("Connection error". $e->getMessage());

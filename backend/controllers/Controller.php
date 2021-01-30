@@ -6,7 +6,7 @@ class Controller {
 	public $error = '';
 
 	public function __construct() {
-		if (!isset($_GET['admin'])) {
+		if (!isset($_SESSION['admin'])) {
 			$_SESSION['notify'] = "Bạn chưa đăng nhập."; 
 			header("Location: index.php?controller=login&action=login");
 			exit();
