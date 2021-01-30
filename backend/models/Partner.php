@@ -3,6 +3,17 @@ include_once "models/Model.php";
 
 class Partner extends Model {
 
+	public function updateStore($name, $thumbnail, $status, $id) {
+		$stmt = $this->conn->prepare("UPDATE partners SET partner_name=:name, partner_thumbnail=:thumbnail, partner_status=:status WHERE id=:id");
+		$arr = [
+			':name' => $name,
+			':thumbnail' => $thumbnail,
+			':status' => $status,
+			':id' => $id
+		];
+		return $stmt->execute($arr);
+	}
+
 	public function getStoreById($id) {
 		$stmt = $this->conn->prepare("SELECT * FROM partners WHERE id=:id");
 		$arr = [

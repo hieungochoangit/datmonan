@@ -45,7 +45,7 @@ class PartnerController extends Controller {
 
 				if ($result) {
 					$_SESSION['success'] = "Thêm thành công";
-					header("Location: http://localhost/datmonan/backend/index.php?controller=partner&action=control");
+					header("Location: http://localhost/datmonan/backend/index.php?controller=partner&action=detail");
 					exit();
 				}
 			}
@@ -73,8 +73,32 @@ class PartnerController extends Controller {
 		$partner = new Partner();
 		$detail = $partner->getStoreById($id);
 
+		// Submit
+		$thumbnaillUrl = $detail['partner_thumbnail'];
 
-		$this->content = $this->view("views/partner/update.php", ['detail' => $detail]);
+		if (isset($_POST['submit'])) {
+			$name = $_POST['name'];
+			$status = $_POST['status'];
+			$thumbnail = $_FILES['thumbnail'];
+
+			if (empty($name)) {
+				$this->error = "Không được rỗng";
+			} else {
+				if ($thumbnail['error'] == 0) {
+					$thumbnaillUrl = $this->uploadFile($thumbnail);
+				}
+				// Update
+				$result = $partner->updateStore($name, $thumbnaillUrl, $status, $id);
+
+				if ($result) {
+					header("Location: http://localhost/datmonan/backend/index.php?controller=partner&action=detail");
+					exit();
+				}
+			}
+
+		}
+
+		$this->content = $this->view("views/partner/update.php", ['detail' => $detail, 'error' => $this->error]);
 		include "views/layouts/content.php";
 	}
 }
