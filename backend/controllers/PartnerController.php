@@ -1,6 +1,7 @@
 <?php 
 include_once "controllers/Controller.php";
 include_once "models/User.php";
+include_once "models/Partner.php";
 
 class PartnerController extends Controller {
 
@@ -32,8 +33,20 @@ class PartnerController extends Controller {
 
 
 			// Validate 
-			if (empty($name) || empty($thumbnail)) {
+			if (empty($name) || $thumbnail['error'] != 0) {
 				$this->error = "Không được để rỗng";
+			} else {
+				$thumbnaillUrl = $this->uploadFile($thumbnail);
+				$id = $_SESSION['admin']['id'];
+				// Add to database
+				$partner = new Partner();
+				$result = $partner->insert($name, $thumbnaillUrl, $status, $id);
+
+				if ($result) {
+					$_SESSION['success'] = "Thêm thành công";
+					header("Location: http://localhost/datmonan/backend/index.php?controller=partner&action=control");
+					exit();
+				}
 			}
 		}
 
