@@ -419,20 +419,20 @@
                                             <div class="account-dropdown__body">
                                                 <div class="account-dropdown__item">
                                                     <a href="#">
-                                                        <i class="zmdi zmdi-account"></i>Account</a>
+                                                        <i class="zmdi zmdi-account"></i>Tài khoản</a>
                                                 </div>
                                                 <div class="account-dropdown__item">
                                                     <a href="#">
-                                                        <i class="zmdi zmdi-settings"></i>Setting</a>
+                                                        <i class="zmdi zmdi-settings"></i>Thiết lập</a>
                                                 </div>
                                                 <div class="account-dropdown__item">
                                                     <a href="#">
-                                                        <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                                        <i class="zmdi zmdi-money-box"></i>Tiền</a>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__footer">
-                                                <a href="#">
-                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                                <a href="http://localhost/datmonan/backend/index.php?controller=user&action=logout">
+                                                    <i class="zmdi zmdi-power"></i>Đăng xuất</a>
                                             </div>
                                         </div>
                                     </div>
