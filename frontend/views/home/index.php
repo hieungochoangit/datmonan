@@ -8,46 +8,18 @@
         </div>
         <div class="section-wrapper">
             <div class="row justify-content-center">
+                <?php foreach($cateList as $category) : ?>
                 <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
                     <div class="recipe-item">
                         <div class="recipe-thumb">
-                            <img src="assets/images/food-recipe/08.png" alt="food-recipe">
+                            <img src="<?php echo $category['category_thumbnail'] ?>" alt="food-recipe">
                         </div>
                         <div class="recipe-content">
-                            <a href="#">Salads</a>
+                            <a href="#"><?php echo $category['category_name'] ?></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
-                    <div class="recipe-item">
-                        <div class="recipe-thumb">
-                            <img src="assets/images/food-recipe/06.png" alt="food-recipe">
-                        </div>
-                        <div class="recipe-content">
-                            <a href="#">soft drink</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
-                    <div class="recipe-item">
-                        <div class="recipe-thumb">
-                            <img src="assets/images/food-recipe/07.png" alt="food-recipe">
-                        </div>
-                        <div class="recipe-content">
-                            <a href="#">lunch</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
-                    <div class="recipe-item">
-                        <div class="recipe-thumb">
-                            <img src="assets/images/food-recipe/08.png" alt="food-recipe">
-                        </div>
-                        <div class="recipe-content">
-                            <a href="#">dinner</a>
-                        </div>
-                    </div>
-                </div>
+            <?php endforeach ?>
             </div>
         </div>
     </div>
