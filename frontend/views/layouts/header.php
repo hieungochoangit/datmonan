@@ -23,7 +23,7 @@
 		<!-- cusyom scss -->
         <link rel="stylesheet" href="assets/css/style.css">
         
-		<title>Food Blog - Mezban Home-3</title>
+		<title>Foodsuo</title>
 	</head>
 
 	<body>
@@ -140,7 +140,7 @@
                         <div class="menu-search-form">
                             <div class="widget-search">
                                 <form action="https://www.foxcoders.com/" method="get">
-                                    <input type="text" placeholder="Type here and press enter..." name="s">
+                                    <input type="text" placeholder="Tìm kiếm món ăn..." name="s">
                                     <button type="submit"><i class="icofont-search-2"></i></button>
                                 </form>
                             </div>
@@ -155,67 +155,13 @@
                     <div class="header-bottom w-100">
                         <div class="main-menu">
                             <ul>
-                                <li>
-                                    <a class="active" href="#0">Home</a>
-                                    <ul>
-                                        <li><a href="index-2.html">Home Page One</a></li>
-                                        <li><a href="index-3.html">Home Page Two</a></li>
-                                        <li><a class="active" href="index-4.html">Home Page Three</a></li>
-                                        <li><a href="index-5.html">Home Page Four</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="about.html">About</a></li>
-								<li>
-									<a href="#0">Pages</a>
-									<ul>
-                                        <li>
-                                            <a href="#0">Category</a>
-                                            <ul>
-                                                <li><a href="food-menu.html">Food Category</a></li>
-                                                <li><a href="menu-card.html">Category style 1</a></li>
-                                                <li><a href="menu-card-2.html">Category style 2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#0">Chef</a>
-                                            <ul>
-                                                <li><a href="homechef.html">Home Chef</a></li>
-                                                <li><a href="homechef-single.html">Home Chef Single</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="recepi-single.html">Single Recipe</a></li>
-										<li><a href="404.html">404 Page</a></li>
-										<li><a href="coming-soon.html">Coming Soon Page</a></li>
-									</ul>
-                                </li>
-                                <li>
-									<a href="#0">Blog</a>
-									<ul>
-										<li><a href="blog.html">Blog</a></li>
-										<li><a href="blog-single.html">Blog Single</a></li>
-									</ul>								
-								</li>
-                                <li>
-                                    <a href="#0">Shop</a>
-                                    <ul>
-                                        <li><a href="shop-page.html">Shop Page</a></li>
-                                        <li><a href="shop-single.html">Shop Single style-1</a></li>
-                                        <li><a href="shop-single-2.html">Shop Single style-2</a></li>
-                                        <li><a href="cart-page.html">Cart Page</a></li>
-                                    </ul>
-                                </li>						
-                                <li><a href="contact-us.html">Contact</a></li>
+                                <li><a href="">Trang chủ</a></li>
                             </ul>
                         </div>
                         <div class="author-option">
                             <div class="author-area">
                                 <div class="city-lang">
-                                    <img src="assets/images/header/01.png" alt="city-lang">
-                                    <select name="lang" id="lang">
-                                        <option value="1">ENG</option>
-                                        <option value="2">BAN</option>
-                                        <option value="3">ESP</option>
-                                    </select>
+                                   
                                 </div>
                                 <div class="cart-option">
                                     <img src="assets/images/header/cart.png" alt="shop-cart">
