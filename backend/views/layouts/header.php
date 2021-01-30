@@ -126,6 +126,10 @@
                         <li>
                             <a href="http://localhost/datmonan/backend/index.php?controller=partner">
                                 <i class="fas fa-chart-bar"></i>Quản lý partner</a>
+                        </li>
+                        <li>
+                            <a href="http://localhost/datmonan/backend/index.php?controller=category">
+                                <i class="fas fa-chart-bar"></i>Quản lý danh mục</a>
                         </li>';
                         ?>
 

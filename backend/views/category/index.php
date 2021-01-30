@@ -1,0 +1,1 @@
+<a href="http://localhost/datmonan/backend/index.php?controller=category&action=add" class="btn btn-success">Thêm danh mục</a>
