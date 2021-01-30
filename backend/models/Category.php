@@ -23,6 +23,12 @@ class Category extends Model {
 		return $stmt->fetch(PDO::FETCH_ASSOC);
 	}
 
+	public function getAllCategoryActive() {
+		$stmt = $this->conn->prepare("SELECT * FROM categories WHERE category_status=0");
+		$stmt->execute();
+		return $stmt->fetchAll(PDO::FETCH_ASSOC);
+	}
+
 	public function getAllCategory() {
 		$stmt = $this->conn->prepare("SELECT * FROM categories");
 		$stmt->execute();

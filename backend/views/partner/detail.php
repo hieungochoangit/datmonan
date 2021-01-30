@@ -1,6 +1,7 @@
 <h1>Gian hàng của bạn</h1>
 
 <a class="btn btn-success btn-sm my-3" href="http://localhost/datmonan/backend/index.php?controller=partner&action=create">Thêm gian hàng mới</a>
+<a class="btn btn-success btn-sm my-3" href="http://localhost/datmonan/backend/index.php?controller=product&action=add">Thêm sản phẩm</a>
 
 <div class="row">
 	<?php foreach($store as $detail) : ?>
