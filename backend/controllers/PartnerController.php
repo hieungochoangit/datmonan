@@ -14,13 +14,14 @@ class PartnerController extends Controller {
 		include "views/layouts/content.php";
 	}
 
-	public function control() {
-
-		include "views/layouts/content.php";
-	}
-
 	public function detail() {
-		$this->content = $this->view("views/partner/detail.php");
+		// Get detail store
+		$id = $_SESSION['admin']['id'];
+		$partner = new Partner();
+		$store = $partner->getDetailStore($id);
+
+
+		$this->content = $this->view("views/partner/detail.php", ['store' => $store]);
 		include "views/layouts/content.php";
 	}
 
@@ -54,7 +55,28 @@ class PartnerController extends Controller {
 		include "views/layouts/content.php";
 	}
 
+	public function profile() {
+		$id = isset($_GET['id']) ? $_GET['id'] : '';
 
+		// get detail
+		$partner = new Partner();
+		$detail = $partner->getStoreById($id);
+
+		$this->content = $this->view("views/partner/profile.php", ['detail' => $detail]);
+		include "views/layouts/content.php";
+	}
+
+	function update() {
+		$id = isset($_GET['id']) ? $_GET['id'] : '';
+
+		// get detail
+		$partner = new Partner();
+		$detail = $partner->getStoreById($id);
+
+
+		$this->content = $this->view("views/partner/update.php", ['detail' => $detail]);
+		include "views/layouts/content.php";
+	}
 }
 
 ?>

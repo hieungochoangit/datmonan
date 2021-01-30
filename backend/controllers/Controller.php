@@ -30,7 +30,7 @@ class Controller {
 
             $nameSlug = $this->to_slug($nameAvatar);
             $ext = pathinfo($nameAvatar, PATHINFO_EXTENSION);
-            $newDestination = "../uploads/products/$nameSlug.$ext";
+            $newDestination = "../uploads/partner/$nameSlug.$ext";
             move_uploaded_file($tmpAvatar, $newDestination);
         }
         return $newDestination;
