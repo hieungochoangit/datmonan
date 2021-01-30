@@ -5,8 +5,11 @@ include_once "models/Category.php";
 class CategoryController extends Controller {
 
 	public function index() {
+		// Get all category
+		$category = new Category();
+		$cateList = $category->getAllCategory();
 
-		$this->content = $this->view("views/category/index.php");
+		$this->content = $this->view("views/category/index.php", ['cateList' => $cateList]);
 		include "views/layouts/content.php";
 	}
 
