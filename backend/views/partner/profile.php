@@ -33,3 +33,4 @@
 
 <a href="http://localhost/datmonan/backend/index.php?controller=partner&action=detail" class="btn btn-warning">Quay lại</a>
 <a href="http://localhost/datmonan/backend/index.php?controller=partner&action=update&id=<?php echo $detail['id'] ?>" class="btn btn-danger">Chỉnh sửa</a>
+<a href="http://localhost/datmonan/backend/index.php?controller=partner&action=product&id=<?php echo $detail['id'] ?>" class="btn btn-success">Xem danh sách món ăn</a>

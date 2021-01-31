@@ -2,6 +2,7 @@
 include_once "controllers/Controller.php";
 include_once "models/User.php";
 include_once "models/Partner.php";
+include_once "models/Product.php";
 
 class PartnerController extends Controller {
 
@@ -66,7 +67,7 @@ class PartnerController extends Controller {
 		include "views/layouts/content.php";
 	}
 
-	function update() {
+	public function update() {
 		$id = isset($_GET['id']) ? $_GET['id'] : '';
 
 		// get detail
@@ -100,6 +101,16 @@ class PartnerController extends Controller {
 		}
 
 		$this->content = $this->view("views/partner/update.php", ['detail' => $detail, 'error' => $this->error]);
+		include "views/layouts/content.php";
+	}
+
+	public function product() {
+		$id = isset($_GET['id']) ? $_GET['id'] : '';
+		// Get product
+		$product = new Product();
+		$products = $product->getAllProductByIdPartner($id);
+
+		$this->content = $this->view("views/partner/product.php", ['products' => $products]);
 		include "views/layouts/content.php";
 	}
 }
