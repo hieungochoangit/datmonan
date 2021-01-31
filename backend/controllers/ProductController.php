@@ -7,8 +7,11 @@ include_once "models/Product.php";
 class ProductController extends Controller {
 
 	function index() {
+		// Get all product
+		$product = new Product();
+		$products = $product->getAllProduct();
 
-		$this->content = $this->view("views/product/index.php");
+		$this->content = $this->view("views/product/index.php", ['products' => $products]);
 		include "views/layouts/content.php";
 	}
 

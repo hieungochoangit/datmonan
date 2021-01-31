@@ -3,6 +3,12 @@ include_once "models/Model.php";
 
 class Product extends Model {
 
+	public function getAllProduct() {
+		$stmt = $this->conn->prepare("SELECT partners.*, categories.*, products.* FROM partners INNER JOIN categories, products WHERE partners.id=products.partner_id AND partners.partner_status=0 AND categories.id=products.category_id");
+		$stmt->execute();
+		return $stmt->fetchAll(PDO::FETCH_ASSOC);
+	}
+
 	public function getAllProductByIdPartner($id) {
 		$stmt = $this->conn->prepare("SELECT partners.*, categories.*, products.* FROM partners INNER JOIN categories, products WHERE partners.id=products.partner_id AND partners.partner_status=0 AND categories.id=products.category_id AND partners.id=:id");
 		$arr = [

@@ -18,7 +18,7 @@
 		<?php foreach($products as $product) : ?>
 			<tr>
 				<td><?php echo $product['id'] ?></td>
-				<td>T<?php echo $product['product_name'] ?></td>
+				<td><?php echo $product['product_name'] ?></td>
 				<td><img width="80" src="<?php echo $product['product_thumbnail'] ?>" alt=""></td>
 				<td><?php echo $product['product_price'] ?></td>
 				<td><?php echo $product['product_sale_price'] ?></td>
