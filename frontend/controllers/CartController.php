@@ -41,7 +41,8 @@ class CartController extends Controller {
 				}
 			}
 
-			echo json_encode($_SESSION['cart']);
+			$count = count($_SESSION['cart']);
+			echo $count;
 		}
 	}
 }

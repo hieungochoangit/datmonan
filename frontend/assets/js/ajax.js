@@ -13,7 +13,7 @@ function addToCart(id) {
 		},
 	})
 	.done(function(data) {
-		console.log(data);
+		$('.count-item').text(data);
 	});
 	
 }
