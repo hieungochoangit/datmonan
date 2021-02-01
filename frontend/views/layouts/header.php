@@ -22,6 +22,7 @@
 		<link rel="stylesheet" href="assets/css/swiper.min.css">
 		<!-- cusyom scss -->
         <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
         
 		<title>Foodsuo</title>
 	</head>
@@ -295,7 +296,13 @@
                                         <img src="assets/images/chef/author/08.jpg" alt="author">
                                     </div>
                                     <div class="author-select">
-                                        <a href="http://localhost/datmonan/frontend/index.php?controller=login&action=login">Đăng nhập</a>
+                                        <?php if (isset($_SESSION['user'])) {
+                                            echo $_SESSION['user']['user_email'];
+                                        } else {
+                                            echo '<a href="http://localhost/datmonan/frontend/index.php?controller=login&action=login">Đăng nhập</a>';
+                                        }
+                                        
+                                        ?>
                                     </div>
                                 </div>
                             </div>
