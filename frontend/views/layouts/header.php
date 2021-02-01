@@ -295,10 +295,7 @@
                                         <img src="assets/images/chef/author/08.jpg" alt="author">
                                     </div>
                                     <div class="author-select">
-                                        <select name="author-select" id="author-select">
-                                            <option value="1">My Account </option>
-                                            <option value="2">Log Out </option>
-                                        </select>
+                                        <a href="http://localhost/datmonan/frontend/index.php?controller=login&action=login">Đăng nhập</a>
                                     </div>
                                 </div>
                             </div>
