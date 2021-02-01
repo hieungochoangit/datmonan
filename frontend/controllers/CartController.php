@@ -45,6 +45,16 @@ class CartController extends Controller {
 			echo $count;
 		}
 	}
+
+	public function detail() {
+
+		// echo '<pre>';
+		// print_r($_SESSION['cart']);
+		// die();
+
+		$this->content = $this->view("views/cart/detail.php");
+		include "views/layouts/content.php";
+	}
 }
 
 ?>

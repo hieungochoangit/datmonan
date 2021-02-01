@@ -164,7 +164,7 @@
                                 <div class="city-lang">
                                    
                                 </div>
-                                <div class="cart-option">
+                                <a href="http://localhost/datmonan/frontend/index.php?controller=cart&action=detail" class="cart-option">
                                     <img src="assets/images/header/cart.png" alt="shop-cart">
                                     <div class="count-item">
                                         <?php 
@@ -177,7 +177,7 @@
 
                                          ?>
                                     </div>
-                                </div>
+                                </a>
                                 <div class="author-account">
                                     <div class="author-icon">
                                         <img src="assets/images/chef/author/08.jpg" alt="author">
