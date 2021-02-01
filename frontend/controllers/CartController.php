@@ -71,6 +71,13 @@ class CartController extends Controller {
 			echo json_encode($_SESSION['cart']);
 		}
 	}
+
+	public function delete() {
+		$id = isset($_GET['id']) ? $_GET['id'] : '';
+
+		unset($_SESSION['cart'][$id]);
+		header("Location: http://localhost/datmonan/frontend/index.php?controller=cart&action=detail");
+	}
 }
 
 ?>

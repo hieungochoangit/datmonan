@@ -35,7 +35,7 @@
                             </td>
                             <td><?php echo number_format($item['price'] * $item['quantity']) ?> VNĐ</td>
                             <td>
-                                <a href="#"><img src="assets/images/shop/del.png" alt="product"></a>
+                                <a onclick="del(<?php echo $id ?>);" href="http://localhost/datmonan/frontend/index.php?controller=cart&action=delete&id=<?php echo $id ?>"><img src="assets/images/shop/del.png" alt="product"></a>
                             </td>
                         </tr>
                         <?php endforeach ?>

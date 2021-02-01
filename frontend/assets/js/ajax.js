@@ -34,5 +34,13 @@ function updateCart(id) {
 	.done(function(data) {
 		$("#cart-list").load("http://localhost/datmonan/frontend/index.php?controller=cart&action=detail .shop-cart");
 	})
+}
+
+// delete
+function del(id) {
 	
+	if (!confirm("Bạn có muốn xóa không?")) {
+		event.preventDefault();
+		return;
+	}
 }
