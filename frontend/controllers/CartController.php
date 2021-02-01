@@ -55,6 +55,22 @@ class CartController extends Controller {
 		$this->content = $this->view("views/cart/detail.php");
 		include "views/layouts/content.php";
 	}
+
+	public function update() {
+		if (isset($_POST['id']) && $_POST['quantity']) {
+			$id = $_POST['id'];
+			$quantity = $_POST['quantity'];
+
+			$_SESSION['cart'][$id] = [
+				'name' => $_SESSION['cart'][$id]['name'],
+				'thumbnail' => $_SESSION['cart'][$id]['thumbnail'],
+				'price' => $_SESSION['cart'][$id]['price'],
+				'quantity' => $quantity,
+			];
+
+			echo json_encode($_SESSION['cart']);
+		}
+	}
 }
 
 ?>

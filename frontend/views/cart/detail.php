@@ -4,7 +4,7 @@
     <div class="container">
         <div class="section-wrapper">
             <div class="cart-top">
-                <table>
+                <table id="cart-list">
                     <thead>
                         <tr>
                             <th>Sản phẩm</th>
@@ -15,7 +15,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach($_SESSION['cart'] as $item) : ?>
+                        <?php foreach($_SESSION['cart'] as $id => $item) : ?>
                         <tr>
                             <td class="product-item">
                                 <div class="p-thumb">
@@ -29,7 +29,7 @@
                             <td>
                                 <div class="cart-plus-minus">
                                     <div class="dec qtybutton">-</div>
-                                    <input class="cart-plus-minus-box" type="text" name="qtybutton" value="<?php echo $item['quantity'] ?>">
+                                    <input class="cart-plus-minus-box" onchange="updateCart(<?php echo $id ?>);" type="text" id="quantity_<?php echo $id ?>" name="qtybutton_<?php echo $id ?>" value="<?php echo $item['quantity'] ?>">
                                     <div class="inc qtybutton">+</div>
                                 </div>
                             </td>

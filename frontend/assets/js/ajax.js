@@ -17,3 +17,22 @@ function addToCart(id) {
 	});
 	
 }
+
+// update cart
+function updateCart(id) {
+	quantity = $("#quantity_" + id).val();
+	
+	$.ajax({
+		url: 'http://localhost/datmonan/frontend/index.php?controller=cart&action=update',
+		type: 'POST',
+		dataType: 'json',
+		data: {
+			'id': id,
+			'quantity': quantity
+		},
+	})
+	.done(function(data) {
+		$("#cart-list").load("http://localhost/datmonan/frontend/index.php?controller=cart&action=detail .shop-cart");
+	})
+	
+}
