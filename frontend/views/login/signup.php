@@ -9,12 +9,13 @@
 				</div>
 				<div class="form-group">
 					<label for="">Mật khẩu</label>
-					<input name="passowrd" type="password" class="form-control">
+					<input name="password" type="password" class="form-control">
 				</div>
 				<div class="form-group">
-					<button name="submit" type="submit" class="btn btn-success">Đăng ký</button>
+					<button name="submit" type="submit" class="food-btn style-2"><span>Đăng ký</span></button>
 				</div>
 			</form>
+			<h3><?php echo isset($error) ? $error : ''; ?></h3>
 		</div>
 	</div>
 </div>
