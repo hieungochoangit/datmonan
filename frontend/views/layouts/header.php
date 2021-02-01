@@ -136,7 +136,7 @@
                 <div class="">
                     <div class="header-top w-100">
                         <div class="logo">
-                            <a href="index-2.html"><img src="assets/images/logo/01.png" alt="logo"></a>
+                            <a href="http://localhost/datmonan/frontend/index.php"><img src="assets/images/logo/01.png" alt="logo"></a>
                         </div>
                         <div class="menu-search-form">
                             <div class="widget-search">
@@ -156,7 +156,7 @@
                     <div class="header-bottom w-100">
                         <div class="main-menu">
                             <ul>
-                                <li><a href="">Trang chủ</a></li>
+                                <li><a href="http://localhost/datmonan/frontend/index.php">Trang chủ</a></li>
                             </ul>
                         </div>
                         <div class="author-option">

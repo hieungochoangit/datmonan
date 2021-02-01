@@ -42,7 +42,7 @@
                             <img src="<?php echo $store['partner_thumbnail'] ?>" alt="food-recipe">
                         </div>
                         <div class="recipe-content">
-                            <a href="#"><?php echo $store['partner_name'] ?></a>
+                            <a href="http://localhost/datmonan/frontend/index.php?controller=partner&action=product&id=<?php echo $store['id']; ?>"><?php echo $store['partner_name'] ?></a>
                         </div>
                     </div>
                 </div>

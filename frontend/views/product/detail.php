@@ -127,14 +127,14 @@
     <div class="container">
         <div class="section-wrapper">
             <div class="news-title">
-                <h3>For Newsletter</h3>
+                <h3>Đăng ký nhận thông tin</h3>
             </div>
             <div class="news-form">
                 <form action="https://www.foxcoders.com/">
                     <label>
-                        <input type="email" name="email" placeholder="Enter Your Email">
+                        <input type="email" name="email" placeholder="Nhập thông tin email...">
                     </label>
-                    <input type="submit" name="submit" value="Subscribe now">
+                    <input type="submit" name="submit" value="Đăng ký">
                 </form>
             </div>
         </div>
