@@ -18,7 +18,7 @@
 		<?php foreach($products as $product) : ?>
 			<tr>
 				<td><?php echo $product['id'] ?></td>
-				<td><?php echo $product['product_name'] ?></td>
+				<td><a href="http://localhost/datmonan/backend/index.php?controller=product&action=detail&id=<?php echo $product['id'] ?>"><?php echo $product['product_name'] ?></a></td>
 				<td><img width="80" src="<?php echo $product['product_thumbnail'] ?>" alt=""></td>
 				<td><?php echo $product['product_price'] ?></td>
 				<td><?php echo $product['product_sale_price'] ?></td>

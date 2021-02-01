@@ -55,6 +55,18 @@ class ProductController extends Controller {
 		$this->content = $this->view("views/product/add.php", ['cateList' => $cateList, 'storeList' => $storeList, 'error' => $this->error]);
 		include "views/layouts/content.php";
 	}
+
+	public function detail() {
+		$id = isset($_GET['id']) ? $_GET['id'] : '';
+
+		$product = new Product();
+		$productDetail = $product->getProductById($id);
+
+		
+
+		$this->content = $this->view("views/product/detail.php", ['product' => $productDetail]);
+		include "views/layouts/content.php";
+	}
 }
 
 ?>
