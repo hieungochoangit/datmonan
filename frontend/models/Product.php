@@ -3,6 +3,15 @@ include_once "models/Model.php";
 
 class Product extends Model {
 
+	public function getProductById($id) {
+		$stmt = $this->conn->prepare("SELECT * FROM products WHERE id=:id");
+		$arr = [
+			':id' => $id
+		];
+		$stmt->execute($arr);
+		return $stmt->fetch(PDO::FETCH_ASSOC);
+	}
+
 	public function getDetailPartner($id) {
 		$stmt = $this->conn->prepare("SELECT * FROM partners WHERE id=:id");
 		$arr = [

@@ -13,4 +13,6 @@ include "controllers/$controller.php";
 $app = new $controller();
 $app->$action();
 
+// session_destroy();
+
 ?>

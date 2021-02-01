@@ -9,31 +9,12 @@
                         <div class="product-thumb">
                             <img src="<?php echo $product['product_thumbnail'] ?>" alt="shope">
                             <div class="product-action-link">
-                                <a href="<?php echo $product['product_thumbnail'] ?>" data-rel="lightcase"><i class="icofont-eye"></i></a>
-                                <a href="#"><i class="icofont-heart-alt"></i></a>
-                                <a href="#"><i class="icofont-cart-alt"></i></a>
+                                <a onclick="addToCart(<?php echo $product['id'] ?>);"><i class="fas fa-plus"></i></a>
                             </div>
                         </div>
                         <div class="product-content">
                             <h6><a href="http://localhost/datmonan/frontend/index.php?controller=product&action=detail&id=<?php echo $product['id'] ?>"><?php echo $product['product_name'] ?></a></h6>
                             <h6><?php echo number_format($product['product_price']) ?> VNĐ</h6>
-                        </div>
-                    </div>
-                    <div class="product-list-item">
-                        <div class="product-thumb">
-                            <img src="assets/images/shop/01.jpg" alt="shope">
-                            <div class="product-action-link">
-                                <a href="assets/images/shop/01.jpg" data-rel="lightcase"><i class="icofont-eye"></i></a>
-                                <a href="#"><i class="icofont-heart-alt"></i></a>
-                                <a href="#"><i class="icofont-cart-alt"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <h6><a href="#">Product Title Here</a></h6>
-                            <h6>
-                                $200
-                            </h6>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
                         </div>
                     </div>
                 </div>

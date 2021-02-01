@@ -49,6 +49,7 @@
 		<script src="assets/js/lightcase.js"></script>
 		<script src="assets/js/jquery.counterup.min.js"></script>
         <script src="assets/js/functions.js"></script>
+        <script src="assets/js/ajax.js"></script>
 	</body>
 
 <!-- Mirrored from www.foxcoders.com/demo/mezban/index-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2020 11:24:55 GMT -->
