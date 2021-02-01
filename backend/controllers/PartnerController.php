@@ -113,6 +113,12 @@ class PartnerController extends Controller {
 		$this->content = $this->view("views/partner/product.php", ['products' => $products]);
 		include "views/layouts/content.php";
 	}
+
+	public function delete() {
+		$id = isset($_GET['id']) ? $_GET['id'] : '';
+
+		header("Location: http://localhost/datmonan/backend/index.php?controller=partner&action=detail");
+	}
 }
 
 ?>
