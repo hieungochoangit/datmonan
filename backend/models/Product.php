@@ -3,6 +3,22 @@ include_once "models/Model.php";
 
 class Product extends Model {
 
+	public function updateProduct($name, $thumbnail, $price, $sale, $desc, $status, $partner_id, $category_id, $id) {
+		$stmt = $this->conn->prepare("UPDATE products SET product_name=:name, product_thumbnail=:thumbnail, product_price=:price, product_sale_price=:sale, product_desc=:desc, product_status=:status, partner_id=:partner_id, category_id=:category_id WHERE id=:id");
+		$arr = [
+			':name' => $name,
+			':thumbnail' => $thumbnail,
+			':price' => $price,
+			':sale' => $sale,
+			':desc' => $desc,
+			':status' => $status,
+			':partner_id' => $partner_id,
+			':category_id' => $category_id,
+			':id' => $id
+		];
+		return $stmt->execute($arr);
+	}
+
 	public function getProductById($id) {
 		$stmt = $this->conn->prepare("SELECT partners.*, categories.*, products.* FROM partners INNER JOIN categories, products WHERE partners.id=products.partner_id AND partners.partner_status=0 AND categories.id=products.category_id AND products.id=:id");
 		$arr = [

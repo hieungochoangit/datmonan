@@ -50,4 +50,4 @@
 </table>
 
 <a href="http://localhost/datmonan/backend/index.php?controller=product" class="btn btn-warning">Quay lại</a>
-<a href="" class="btn btn-danger">Chỉnh sửa</a>
+<a href="http://localhost/datmonan/backend/index.php?controller=product&action=update&id=<?php echo $product['id'] ?>" class="btn btn-danger">Chỉnh sửa</a>
