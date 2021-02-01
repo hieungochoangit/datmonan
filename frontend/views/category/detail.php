@@ -14,7 +14,7 @@
 								<div style="width: 100px;" class="p-food-author">
 									<a href="#"><img src="<?php echo $product['partner_thumbnail'] ?>" alt="food-author"></a>
 								</div>
-								<h6><a href="#"><?php echo $product['product_name'] ?></a></h6>
+								<h6><a href="http://localhost/datmonan/frontend/index.php?controller=product&action=detail&id=<?php echo $product['id']; ?>"><?php echo $product['product_name'] ?></a></h6>
 								<div class="p-food-group">
 									<span>Cửa hàng: </span>
 									<a href="#"><?php echo $product['partner_name'] ?></a>
