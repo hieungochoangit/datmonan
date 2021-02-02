@@ -18,7 +18,7 @@
 				<tbody>
 					<?php foreach($orders as $order) : ?>
 						<tr>
-							<td><?php echo $order['order_code'] ?></td>
+							<td><a href="http://localhost/datmonan/frontend/index.php?controller=order&action=detail&id=<?php echo $order['id'] ?>"><?php echo $order['order_code'] ?></a></td>
 							<td><?php echo $order['order_name'] ?></td>
 							<td><?php echo $order['order_address'] ?></td>
 							<td><?php echo $order['order_phone'] ?></td>

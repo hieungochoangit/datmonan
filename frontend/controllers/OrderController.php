@@ -14,6 +14,19 @@ class OrderController extends Controller {
 		$this->content = $this->view("views/order/index.php", ['orders' => $orders]);
 		include "views/layouts/content.php";
 	}
+
+	public function detail() {
+		$id = isset($_GET['id']) ? $_GET['id'] : '';
+
+		$order = new Order();
+		$orderDetail = $order->getOrderById($id);
+
+		// Get detail order
+		$products = $order->getDetailOrderById($id);
+
+		$this->content = $this->view("views/order/detail.php", ['order' => $orderDetail, 'products' => $products]);
+		include "views/layouts/content.php";
+	}
 }
 
 ?>
