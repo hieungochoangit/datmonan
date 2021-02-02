@@ -23,7 +23,7 @@
                                     <div class="chef-desc-middle">
                                         <a href="">Thay đổi thông tin</a>
                                         <span>|</span>
-                                        <a href="">Kiểm tra đơn hàng của bạn</a>
+                                        <a href="http://localhost/datmonan/frontend/index.php?controller=order">Kiểm tra đơn hàng của bạn</a>
                                     </div>
                                 </div>
                             </div>
