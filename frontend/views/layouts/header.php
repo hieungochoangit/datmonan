@@ -161,9 +161,6 @@
                         </div>
                         <div class="author-option">
                             <div class="author-area">
-                                <div class="city-lang">
-                                   
-                                </div>
                                 <a href="http://localhost/datmonan/frontend/index.php?controller=cart&action=detail" class="cart-option">
                                     <img src="assets/images/header/cart.png" alt="shop-cart">
                                     <div class="count-item">
@@ -184,7 +181,7 @@
                                     </div>
                                     <div class="author-select">
                                         <?php if (isset($_SESSION['user'])) {
-                                            echo $_SESSION['user']['user_email'];
+                                            echo '<a href="http://localhost/datmonan/frontend/index.php?controller=user&action=detail">' . $_SESSION['user']['user_email'] . '</a>';
                                         } else {
                                             echo '<a href="http://localhost/datmonan/frontend/index.php?controller=login&action=login">Đăng nhập</a>';
                                         }
@@ -199,3 +196,4 @@
 			</div>
 		</header>
         <!-- header section ending -->
+        </a>
