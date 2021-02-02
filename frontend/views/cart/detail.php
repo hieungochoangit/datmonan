@@ -56,21 +56,27 @@
                 <div class="shiping-box">
                     <div class="row">
                         <div class="col-md-6 col-12">
-                            <div class="calculate-shiping">
+                            <form action="" method="POST">
+                                <div class="calculate-shiping">
                                 <h4>Thông tin nhận hàng</h4>
                                 <div class="outline-select">
                                     <div class="form-group">
-                                        <input type="text" placeholder="Địa chỉ nhận hàng..." name="s" class="form-control">
+                                        <input type="text" placeholder="Người nhận hàng..." name="name" class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" placeholder="Số điện thoại..." name="s" class="form-control">
+                                        <input type="text" placeholder="Địa chỉ nhận hàng..." name="address" class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" placeholder="Ghi chú cho cửa hàng..." name="s" class="form-control">
+                                        <input type="text" placeholder="Số điện thoại..." name="phone" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Ghi chú cho cửa hàng..." name="note" class="form-control">
                                     </div>
                                 </div>
-                                <button type="submit" class="food-btn"><span>Đặt hàng</span></button>
-                            </div>
+                                    <button type="submit" name="order" class="food-btn"><span>Đặt hàng</span></button>
+                                </div>
+                                <?php echo isset($error) ? $error : '' ?>
+                            </form>
                         </div>
                         <div class="col-md-6 col-12">
                             <div class="cart-overview">

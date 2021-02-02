@@ -1,6 +1,7 @@
 <?php  
 include_once "controllers/Controller.php";
 include_once "models/Product.php";
+include_once "models/Cart.php";
 
 class CartController extends Controller {
 
@@ -47,12 +48,47 @@ class CartController extends Controller {
 	}
 
 	public function detail() {
+		// Submit
+		if (isset($_POST['order'])) {
+			$name = $_POST['name'];
+			$address = $_POST['address'];
+			$phone = $_POST['phone'];
+			$note = $_POST['note'];
+			$code = rand(0, 100000);
+			$idUser = $_SESSION['user']['id'];
 
-		// echo '<pre>';
-		// print_r($_SESSION['cart']);
-		// die();
+			// Validate
 
-		$this->content = $this->view("views/cart/detail.php");
+			// Check empty cart
+			if (empty($_SESSION['cart'])) {
+				$this->error = "Khong co san pham, mua hang ngay";
+			} else if (empty($name) || empty($address) || empty($phone)) {
+				$this->error = "Khong duoc rong";
+			} else {
+				// add to database, table orders
+				$totalPrice = 0;
+				foreach ($_SESSION['cart'] as $key => $value) {
+					$totalPrice += $value['price'] * $value['quantity'];
+				}
+				$cart = new Cart();
+				$order = $cart->addOrder($code, $name, $address, $phone, $totalPrice, count($_SESSION['cart']), $idUser, $note);
+
+				if ($order) {
+					$order = $cart->getIdOrderByIdUser($idUser);
+					$idOrder = $order['id'];
+
+					foreach ($_SESSION['cart'] as $key => $value) {
+						$result = $cart->addOrderDetail($key, $value['name'], $value['thumbnail'], $value['quantity'], $value['price'], $idOrder);
+					}
+
+					unset($_SESSION['cart']);
+					header("Location: http://localhost/datmonan/frontend/index.php");
+					exit();
+				}
+			}
+		}
+
+		$this->content = $this->view("views/cart/detail.php", ['error' => $this->error]);
 		include "views/layouts/content.php";
 	}
 
