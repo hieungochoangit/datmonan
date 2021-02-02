@@ -19,10 +19,10 @@
                         <tr>
                             <td class="product-item">
                                 <div class="p-thumb">
-                                    <a href="#"><img src="<?php echo $item['thumbnail'] ?>" alt="product"></a>
+                                    <a href="http://localhost/datmonan/frontend/index.php?controller=product&action=detail&id=<?php echo $id ?>"><img src="<?php echo $item['thumbnail'] ?>" alt="product"></a>
                                 </div>
                                 <div class="p-content">
-                                    <a href="#"><?php echo $item['name'] ?></a>
+                                    <a href="http://localhost/datmonan/frontend/index.php?controller=product&action=detail&id=<?php echo $id ?>"><?php echo $item['name'] ?></a>
                                 </div>
                             </td>
                             <td><?php echo number_format($item['price']) ?></td>

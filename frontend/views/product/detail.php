@@ -39,11 +39,11 @@
                                         </ul>
                                     </div>
 
-                                    <form action="">
-                                        <input style="width: 10%;" type="number" class="form-control">
-                                        <button type="submit" class="food-btn border-0"><span>Thêm vào giỏ</span></button>
+                                    <form action="" method="POST">
+                                        <input style="width: 10%;" name="quantity" type="number" class="form-control">
+                                        <button type="submit" name="submit" class="food-btn border-0"><span>Thêm vào giỏ</span></button>
                                     </form>
-
+                                    <?php echo isset($error) ? $error : '' ?>
                                     <p><?php echo $product['product_desc'] ?></p>
                                 </div>
                             </div>

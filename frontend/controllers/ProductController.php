@@ -23,7 +23,44 @@ class ProductController extends Controller {
 		$category = new Category();
 		$cateList = $category->getAllCategory();
 
-		$this->content = $this->view("views/product/detail.php", ['product' => $productDetail, 'products' => $productList, 'partner' => $partner, 'cateList' => $cateList]);
+		// Submit
+		if (isset($_POST['submit'])) {
+			$quantity = $_POST['quantity'];
+			
+			if ($quantity < 0) {
+				$this->error = "Không được < 0";
+			} else {
+				if (!isset($_SESSION['cart'])) {
+					$_SESSION['cart'][$id] = [
+						'name' => $productDetail['product_name'],
+						'thumbnail' => $productDetail['product_thumbnail'],
+						'price' => $productDetail['product_price'],
+						'quantity' => $quantity,
+					];
+				} else {
+					if (array_key_exists($id, $_SESSION['cart'])) {
+						$_SESSION['cart'][$id] = [
+						'name' => $productDetail['product_name'],
+						'thumbnail' => $productDetail['product_thumbnail'],
+						'price' => $productDetail['product_price'],
+						'quantity' => $quantity + $_SESSION['cart'][$id]['quantity']
+					];
+					} else {
+							$_SESSION['cart'][$id] = [
+							'name' => $productDetail['product_name'],
+							'thumbnail' => $productDetail['product_thumbnail'],
+							'price' => $productDetail['product_price'],
+							'quantity' => $quantity,
+						];
+					}
+				}
+
+				header("Location: http://localhost/datmonan/frontend/index.php?controller=cart&action=detail");
+				exit();
+			}
+		}
+
+		$this->content = $this->view("views/product/detail.php", ['product' => $productDetail, 'products' => $productList, 'partner' => $partner, 'cateList' => $cateList, 'error' => $this->error]);
 		include "views/layouts/content.php";
 	}
 }
