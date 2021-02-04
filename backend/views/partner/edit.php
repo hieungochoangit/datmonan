@@ -1,4 +1,9 @@
-<h1>Partner</h1>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+    <li class="breadcrumb-item active" aria-current="page">sửa</li>
+  </ol>
+</nav>
 
 <table class="table table-bordered my-3">
 	<tr>

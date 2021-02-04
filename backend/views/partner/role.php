@@ -1,4 +1,9 @@
-<h1>Cập nhập vai trò</h1>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+    <li class="breadcrumb-item active" aria-current="page">cập nhập vai trò</li>
+  </ol>
+</nav>
 
 <form action="" method="POST">
 	<select name="role" id="">

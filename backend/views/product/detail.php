@@ -1,4 +1,10 @@
-<h1>Chi tiết sản phẩm</h1>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+    <li class="breadcrumb-item" aria-current="page">chi tiết sản phẩm</li>
+    <li class="breadcrumb-item active" aria-current="page"><?php echo $product['product_name'] ?></li>
+  </ol>
+</nav>
 
 <table class="table table-bordered my-3">
 	<tr>

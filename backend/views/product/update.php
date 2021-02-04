@@ -1,4 +1,10 @@
-<h1>Chỉnh sửa món ăn</h1>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+    <li class="breadcrumb-item active" aria-current="page">chỉnh sửa</li>
+  </ol>
+</nav>
+
 <form action="" method="POST" enctype="multipart/form-data">
 	<div class="row">
 		<div class="col-md-6">

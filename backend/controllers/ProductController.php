@@ -84,7 +84,7 @@ class ProductController extends Controller {
 
 		// Get store
 		$partner = new Partner();
-		$storeList = $partner->getAllStoreActive();
+		$storeList = $partner->getAllStoreActive($_SESSION['admin']['id']);
 
 		// Submit
 		if (isset($_POST['submit'])) {

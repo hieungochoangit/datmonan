@@ -1,4 +1,9 @@
-<h1>Thêm mới gian hàng</h1>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Thêm mới</li>
+  </ol>
+</nav>
 
 <form action="" method="POST" enctype="multipart/form-data">
 	<div class="div form-group">

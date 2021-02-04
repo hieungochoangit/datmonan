@@ -1,4 +1,9 @@
-<h1>Danh sách sản phẩm cửa hàng</h1>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+    <li class="breadcrumb-item active" aria-current="page">danh sách món ăn</li>
+  </ol>
+</nav>
 
 <table class="table table-bordered my-4">
 	<thead>

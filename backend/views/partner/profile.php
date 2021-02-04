@@ -1,4 +1,9 @@
-<h1>Chi tiết cửa hàng của bạn</h1>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+    <li class="breadcrumb-item active" aria-current="page">chi tiết</li>
+  </ol>
+</nav>
 
 <table class="table table-bordered my-3">
 	<tr>

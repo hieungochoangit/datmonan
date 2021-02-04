@@ -1,4 +1,9 @@
-<h1>Gian hàng của bạn</h1>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+    <li class="breadcrumb-item active" aria-current="page">chi tiết</li>
+  </ol>
+</nav>
 
 <a class="btn btn-success btn-sm my-3" href="http://localhost/datmonan/backend/index.php?controller=partner&action=create">Thêm gian hàng mới</a>
 <a class="btn btn-success btn-sm my-3" href="http://localhost/datmonan/backend/index.php?controller=product&action=add">Thêm sản phẩm</a>

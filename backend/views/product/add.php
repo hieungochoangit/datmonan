@@ -1,4 +1,9 @@
-<h1>Thêm sản phẩm</h1>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Thêm mới sản phẩm</li>
+  </ol>
+</nav>
 
 <form action="" method="POST" enctype="multipart/form-data">
 	<div class="row">

@@ -1,4 +1,9 @@
-<h1>Cập nhật danh mục</h1>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+    <li class="breadcrumb-item active" aria-current="page">cập nhập</li>
+  </ol>
+</nav>
 
 <div class="row">
 	<div class="col-md-5">
