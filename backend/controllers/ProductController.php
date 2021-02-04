@@ -7,9 +7,10 @@ include_once "models/Product.php";
 class ProductController extends Controller {
 
 	function index() {
+		$id = $_SESSION['admin']['id'];
 		// Get all product
 		$product = new Product();
-		$products = $product->getAllProduct();
+		$products = $product->getAllProduct($id);
 
 		$this->content = $this->view("views/product/index.php", ['products' => $products]);
 		include "views/layouts/content.php";
@@ -20,9 +21,11 @@ class ProductController extends Controller {
 		$category = new Category();
 		$cateList = $category->getAllCategoryActive();
 
+		$id = $_SESSION['admin']['id'];
+
 		// Get store
 		$partner = new Partner();
-		$storeList = $partner->getAllStoreActive();
+		$storeList = $partner->getAllStoreActive($id);
 
 		// Submit
 		if (isset($_POST['submit'])) {

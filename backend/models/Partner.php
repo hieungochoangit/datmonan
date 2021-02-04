@@ -3,9 +3,12 @@ include_once "models/Model.php";
 
 class Partner extends Model {
 
-	public function getAllStoreActive() {
-		$stmt = $this->conn->prepare("SELECT * FROM partners WHERE partner_status=0");
-		$stmt->execute();
+	public function getAllStoreActive($id) {
+		$stmt = $this->conn->prepare("SELECT * FROM partners WHERE partner_status=0 AND user_id=:id");
+		$arr = [
+			':id' => $id
+		];
+		$stmt->execute($arr);
 		return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
 
