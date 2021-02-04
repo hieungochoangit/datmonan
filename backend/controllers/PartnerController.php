@@ -119,6 +119,40 @@ class PartnerController extends Controller {
 
 		header("Location: http://localhost/datmonan/backend/index.php?controller=partner&action=detail");
 	}
+
+	public function edit() {
+		$id = isset($_GET['id']) ? $_GET['id'] : '';
+
+		// Get info
+		$user = new User();
+		$detail = $user->getUserById($id);
+
+		$this->content = $this->view("views/partner/edit.php", ['user' => $detail]);
+		include "views/layouts/content.php";
+	}
+
+	public function role() {
+		$id = isset($_GET['id']) ? $_GET['id'] : '';
+		$user = new User();
+
+		// Get all role
+		$roles = $user->getRoles();
+
+		// submit
+		if (isset($_POST['submit'])) {
+			$role = $_POST['role'];
+
+			// update
+			$update = $user->updateRoleUser($role, $id);
+			if ($update) {
+				header("Location: http://localhost/datmonan/backend/index.php?controller=partner");
+				exit();
+			}
+		}
+
+		$this->content = $this->view("views/partner/role.php", ['roles' => $roles]);
+		include "views/layouts/content.php";
+	}
 }
 
 ?>
